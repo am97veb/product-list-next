@@ -1,11 +1,16 @@
-import { Product } from "@/types/api";
+interface GetDiscountedPriceProps {
+  price: number;
+  percentage?: number | null;
+}
 
-export const getDiscountedPrice = ({ product }: { product: Product }) => {
-  if (!product.promotion) {
+export const getDiscountedPrice = ({
+  price,
+  percentage,
+}: GetDiscountedPriceProps) => {
+  if (!percentage) {
     return null;
   }
-  const discoutendPrice =
-    product.price * (1 - product.promotion.percentage / 100);
+  const discountedPrice = price * (1 - percentage / 100);
 
-  return discoutendPrice.toFixed(2);
+  return discountedPrice.toFixed(2);
 };

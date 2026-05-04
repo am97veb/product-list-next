@@ -1,0 +1,35 @@
+.productDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 20px;
+    word-break: break-word;
+    grid-area: details;
+}
+
+@media (max-width: 576px) {
+    .productDetails {
+        padding: 20px 0 0 0;
+    }
+}
+
+.productName {
+    font-size: var(--font-lg);
+    font-weight: bold;
+}
+
+@media (max-width: 576px) {
+    .productName {
+        font-size: var(--font-md);
+    }
+}
+
+.productDescription {
+    font-size: var(--font-md);
+}
+
+@media (max-width: 576px) {
+    .productDescription {
+        font-size: var(--font-sm);
+    }
+}
