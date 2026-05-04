@@ -1,0 +1,29 @@
+.header {
+    height: 80px;
+    background-color: #161718;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    box-shadow: var(--shadow);
+}
+
+.wrapper {
+    max-width: 800px;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.appLogo {
+    border: 1px solid #ffffff;
+    border-radius: var(--radius);
+}
+
+.count {
+    color: rgb(206, 206, 206);
+    font-size: var(--font-lg);
+}
