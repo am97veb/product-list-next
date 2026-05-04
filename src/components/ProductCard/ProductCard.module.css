@@ -96,6 +96,12 @@
     }
 }
 
+.discountedPrice {
+    font-size: var(--font-lg);
+    color: red;
+    font-weight: bold;
+}
+
 .addToCartButton {
     width: 120px;
     font-size: var(--font-sm);

@@ -1,6 +1,7 @@
 "use client";
 import { Product } from "@/types/api";
 import styles from "./ProductCard.module.css";
+import { getDiscountedPrice } from "@/utils/getDiscountedPrice";
 
 export default function ProductCard({ product }: { product: Product }) {
   return (
@@ -20,6 +21,9 @@ export default function ProductCard({ product }: { product: Product }) {
           {product.promotion
             ? `On sale: \n ${product.promotion.name} \n ${product.promotion.percentage}% off`
             : null}
+        </p>
+        <p className={styles.discountedPrice}>
+          {getDiscountedPrice({ product })}
         </p>
       </div>
       <button className={styles.addToCartButton}>add to cart</button>
