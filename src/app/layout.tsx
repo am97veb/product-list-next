@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header/Header";
 import { ColumbusRecruitmentData } from "@/types/api";
 import fetchApi from "@/api/fetchApi";
+import { CartProvider } from "@/context/CartContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,8 +31,10 @@ export default async function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
-        <Header logo={logo.url} />
-        {children}
+        <CartProvider>
+          <Header logo={logo.url} />
+          {children}
+        </CartProvider>
       </body>
     </html>
   );
