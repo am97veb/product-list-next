@@ -22,8 +22,3 @@
     border: 1px solid #ffffff;
     border-radius: var(--radius);
 }
-
-.count {
-    color: rgb(206, 206, 206);
-    font-size: var(--font-lg);
-}
