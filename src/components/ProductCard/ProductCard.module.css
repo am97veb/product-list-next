@@ -5,17 +5,17 @@
     box-shadow: var(--shadow);
     display: grid;
     grid-template-areas:
-        "image details price"
-        "image details price"
-        "image details button";
+        "picture details price"
+        "picture details price"
+        "picture details button";
 }
 
 @media (max-width: 576px) {
     .productListItem {
         padding: 10px;
         grid-template-areas:
-            "image  price"
-            "image  button"
+            "picture  price"
+            "picture  button"
             "details details";
     }
 }
